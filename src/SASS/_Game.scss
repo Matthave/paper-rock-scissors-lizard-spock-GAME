@@ -1,0 +1,14 @@
+.game{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    &__img{
+        position: absolute;
+        width:250px;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
+}

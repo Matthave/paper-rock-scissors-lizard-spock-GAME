@@ -1,0 +1,65 @@
+.circleScissors{
+  @include option;
+    top:15%;
+    left:50%;
+    background-color: #EAA927;
+    &:hover{
+      box-shadow: 0px 0px 5px 1px #EAA927;
+    }
+    &::after{
+        background-image: url(../images/icon-scissors.svg);
+    }
+}
+
+.circlePaper{
+  @include option;
+  top:40%;
+  left:85%;
+  background-color: #5471F4;
+  &:hover{
+    box-shadow: 0px 0px 5px 1px #5471F4;
+  }
+  &::after{
+      background-image: url(../images/icon-paper.svg);
+  }
+}
+
+.circleRock{
+  @include option;
+  top:85%;
+  left:75%;
+  background-color: #DF3D55;
+  &:hover{
+    box-shadow: 0px 0px 5px 1px #DF3D55;
+  }
+  &::after{
+      background-image: url(../images/icon-rock.svg);
+  }
+}
+
+.circleLizard{
+  @include option;
+  top:85%;
+  left:25%;
+  background-color:  #8B5EE2;
+  &:hover{
+    box-shadow: 0px 0px 5px 1px #8B5EE2;
+  }
+  &::after{
+      background-image: url(../images/icon-lizard.svg);
+  }
+}
+
+
+.circleSpock{
+  @include option;
+  top:40%;
+  left:15%;
+  background-color: #4CBCD1;
+  &:hover{
+    box-shadow: 0px 0px 5px 1px #4CBCD1;
+  }
+  &::after{
+      background-image: url(../images/icon-spock.svg);
+  }
+}

@@ -1,0 +1,88 @@
+.scissorsBig{
+  @include chosen;
+    background-color: #EAA927;
+    cursor: pointer;
+    &::after{
+        background-image: url('../images/icon-scissors.svg');
+    }
+}
+
+.paperBig{
+  @include chosen;
+    background-color: #5471F4;
+    cursor: pointer;
+    &::after{
+        background-image: url('../images/icon-paper.svg');
+    }
+}
+
+.rockBig{
+  @include chosen;
+    background-color: #DF3D55;
+    cursor: pointer;
+    &::after{
+        background-image: url('../images/icon-rock.svg');
+    }
+}
+
+.lizardBig{
+  @include chosen;
+    background-color: #8B5EE2;
+    cursor: pointer;
+    &::after{
+        background-image: url('../images/icon-lizard.svg');
+    }
+}
+
+.spockBig{
+  @include chosen;
+    background-color: #4CBCD1;
+    cursor: pointer;
+    &::after{
+        background-image: url('../images/icon-spock.svg');
+    }
+}
+
+.gameResult{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &__chosen{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__house{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color:rgba(0,0,0,0.25);
+  }
+  &__outcome{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    height: 180px;
+  }
+  &__win{
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+  }
+  &__again{
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color:hsl(229, 25%, 31%);
+    padding: 15px 10px;
+    width: 70%;
+    border-radius: 10px;
+    border:none;
+    background-color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
