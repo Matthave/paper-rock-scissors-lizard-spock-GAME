@@ -49,6 +49,13 @@ body {
   margin: 0px auto;
 }
 
+@media (min-width: 1200px) {
+  .result {
+    max-width: 650px;
+    padding: 15px 25px;
+  }
+}
+
 .result__score {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +83,13 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .result__score {
+    width: 135px;
+    height: 110px;
+  }
+}
+
 .result__scoreText {
   font-size: 0.9rem;
   color: #3b4363;
@@ -96,6 +110,12 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .result__logo {
+    width: 110px;
+  }
+}
+
 .game {
   position: relative;
   width: 300px;
@@ -107,6 +127,8 @@ body {
   .game {
     width: 450px;
     height: 450px;
+    margin-bottom: 0px;
+    margin-top: 40px;
   }
 }
 
@@ -162,17 +184,17 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
+  width: 100vw;
+  height: 100vh;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 50px 15px 25px;
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .rules__escape {
   position: absolute;
-  top: 10%;
-  left: 90%;
+  top: 7.5%;
+  left: 95%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 30px;
@@ -180,6 +202,49 @@ body {
   background-image: url("../images/icon-close.svg");
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.rules__img {
+  width: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .rules__img {
+    width: 400px;
+  }
+}
+
+.rules__wrap {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  padding: 50px 25px 25px;
+  border-radius: 10px;
+}
+
+@media (min-width: 1024px) {
+  .rules__wrap {
+    width: 400px;
+    height: 500px;
+  }
 }
 
 .circleScissors {
@@ -464,6 +529,13 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .scissorsBig {
+    width: 290px;
+    height: 290px;
+  }
+}
+
 .scissorsBig::after {
   content: "";
   position: absolute;
@@ -488,6 +560,13 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .scissorsBig::after {
+    width: 240px;
+    height: 240px;
+  }
+}
+
 .scissorsBig::after {
   background-image: url("../images/icon-scissors.svg");
 }
@@ -506,6 +585,13 @@ body {
   .paperBig {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .paperBig {
+    width: 290px;
+    height: 290px;
   }
 }
 
@@ -533,6 +619,13 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .paperBig::after {
+    width: 240px;
+    height: 240px;
+  }
+}
+
 .paperBig::after {
   background-image: url("../images/icon-paper.svg");
 }
@@ -551,6 +644,13 @@ body {
   .rockBig {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rockBig {
+    width: 290px;
+    height: 290px;
   }
 }
 
@@ -578,6 +678,13 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .rockBig::after {
+    width: 240px;
+    height: 240px;
+  }
+}
+
 .rockBig::after {
   background-image: url("../images/icon-rock.svg");
 }
@@ -596,6 +703,13 @@ body {
   .lizardBig {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lizardBig {
+    width: 290px;
+    height: 290px;
   }
 }
 
@@ -623,6 +737,13 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .lizardBig::after {
+    width: 240px;
+    height: 240px;
+  }
+}
+
 .lizardBig::after {
   background-image: url("../images/icon-lizard.svg");
 }
@@ -641,6 +762,13 @@ body {
   .spockBig {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .spockBig {
+    width: 290px;
+    height: 290px;
   }
 }
 
@@ -665,6 +793,13 @@ body {
   .spockBig::after {
     width: 210px;
     height: 210px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .spockBig::after {
+    width: 240px;
+    height: 240px;
   }
 }
 
@@ -711,6 +846,12 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .gameResult__chosen {
+    max-width: 1050px;
+  }
+}
+
 .gameResult__house {
   width: 150px;
   height: 150px;
@@ -744,6 +885,7 @@ body {
 @media (min-width: 1024px) {
   .gameResult__outcome {
     width: auto;
+    min-width: 350px;
   }
 }
 

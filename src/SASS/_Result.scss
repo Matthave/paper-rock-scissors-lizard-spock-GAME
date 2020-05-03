@@ -8,6 +8,10 @@
     width:90%;
     max-width: 600px;
     margin: 0px auto;
+    @include mq(xlarge){
+    max-width: 650px;
+    padding: 15px 25px;
+    }
     &__score{
         display: flex;
         flex-direction: column;
@@ -20,6 +24,10 @@
         @include mq(large){
           width:100px;
           height: 95px;
+        }
+        @include mq(xlarge){
+          width:135px;
+          height: 110px;
         }
     }
     &__scoreText{
@@ -34,6 +42,9 @@
       width: 75px;
       @include mq(large){
         width:100px;
+      }
+      @include mq(xlarge){
+        width:110px;
       }
     }
 }
