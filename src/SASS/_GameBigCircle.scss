@@ -54,13 +54,21 @@
     width:100%;
     max-width: 600px;
     margin:0 auto;
+    transition: 0.2s linear;
     @include mq(large){
-      max-width: 900px;
+      max-width: 600px;
       order: 2;
       align-items: center;
+      transition: 0.2s linear;
+      &--bigger{
+        max-width: 900px;
+      }
     }
     @include mq(xlarge){
-      max-width: 1050px;
+      max-width: 900px;
+      &--bigger{
+        max-width: 1050px;
+      }
     }
   }
   &__house{
@@ -72,6 +80,10 @@
       width:250px;
       height: 250px;
     }
+    @include mq(xlarge){
+      width: 290px;
+      height: 290px;
+    }
   }
   &__outcome{
     width: 100%;
@@ -81,8 +93,12 @@
     margin-top: 50px;
     height: 180px;
     @include mq(large){
-      width: auto;
-      min-width: 350px;
+      display: none;
+       &--visibility{
+        display: inherit;
+        width: auto;
+        min-width: 350px;
+       }
     }
   }
   &__win{
@@ -141,4 +157,25 @@
     @include mq(large){
       order:1;
     }  
+}
+
+
+.win{
+  animation: win 0.5s linear both;
+}
+
+#win{
+  animation: win 0.5s linear both;
+}
+
+
+@keyframes win {
+  0%{
+    box-shadow: 0px 0px 5px 2px white;
+    box-sizing: content-box;
+  }
+  100%{
+    box-shadow: 0px 0px 50px 5px white;
+    box-sizing: content-box;
+  }
 }

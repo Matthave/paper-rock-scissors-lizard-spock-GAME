@@ -24,11 +24,18 @@ class App extends Component {
   }
 
   playAgain = (result) => {
-    this.setState({
-      resultVisibilty: false,
-      currentChosen: '',
-      currentScore: this.state.currentScore + result
-    })
+    if (this.state.currentScore === 0 && result === -1) {
+      this.setState({
+        resultVisibilty: false,
+        currentChosen: '',
+      })
+    } else {
+      this.setState({
+        resultVisibilty: false,
+        currentChosen: '',
+        currentScore: this.state.currentScore + result
+      })
+    }
   }
 
   showRules = () => {
@@ -38,15 +45,16 @@ class App extends Component {
   }
 
   render() {
+    const { currentScore, resultVisibilty, currentChosen, rulesVisibility } = this.state;
     return (
       <div className="App">
-        <Result currentScore={this.state.currentScore} />
-        {this.state.resultVisibilty ? <GameResult
-          chosen={this.state.currentChosen}
+        <Result currentScore={currentScore} />
+        {resultVisibilty ? <GameResult
+          chosen={currentChosen}
           playAgain={this.playAgain}
         /> : <Game click={this.clickOption} />}
         <RulesBtn showRules={this.showRules} />
-        {this.state.rulesVisibility ? <Rules showRules={this.showRules} /> : null}
+        {rulesVisibility ? <Rules showRules={this.showRules} /> : null}
       </div>
     );
   }
