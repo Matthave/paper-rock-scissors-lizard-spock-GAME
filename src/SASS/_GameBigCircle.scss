@@ -51,12 +51,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width:100%;
+    max-width: 600px;
+    margin:0 auto;
+    @include mq(large){
+      max-width: 900px;
+      order: 2;
+      align-items: center;
+    }
   }
   &__house{
     width:150px;
     height: 150px;
     border-radius: 50%;
     background-color:rgba(0,0,0,0.25);
+    @include mq(large){
+      width:250px;
+      height: 250px;
+    }
   }
   &__outcome{
     width: 100%;
@@ -65,6 +77,9 @@
     align-items: center;
     margin-top: 50px;
     height: 180px;
+    @include mq(large){
+      width: auto;
+    }
   }
   &__win{
     font-size: 4rem;
@@ -85,4 +100,41 @@
     text-transform: uppercase;
     cursor: pointer;
   }
+  &__yourChosen,
+  &__houseChosen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color:white;
+    @include mq(large){
+      flex-direction: column-reverse;
+    }
+  }
+  &__yourChosenTxt,
+  &__houseChosenTxt{
+    margin-top: 35px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include mq(large){
+      margin-top:0;
+      margin-bottom:35px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.gameResult__yourChosen{
+    @include mq(large){
+      order: 0;
+    }
+}
+
+.gameResult__houseChosen{
+    @include mq(large){
+      order:1;
+    }  
 }

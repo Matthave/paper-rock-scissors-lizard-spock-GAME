@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Result from './Result';
 import Game from './Game';
-import Rules from './Rules';
+import RulesBtn from './RulesBtn';
 import GameResult from './GameResult';
+import Rules from './Rules';
 import '../css/style.css';
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
     currentChosen: '',
     currentScore: 0
   }
+
   clickOption = (choosen) => {
     this.setState({
       currentChosen: choosen
@@ -43,7 +45,8 @@ class App extends Component {
           chosen={this.state.currentChosen}
           playAgain={this.playAgain}
         /> : <Game click={this.clickOption} />}
-        <Rules showRules={this.showRules} />
+        <RulesBtn showRules={this.showRules} />
+        {this.state.rulesVisibility ? <Rules showRules={this.showRules} /> : null}
       </div>
     );
   }

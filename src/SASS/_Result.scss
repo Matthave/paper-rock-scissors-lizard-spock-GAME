@@ -5,6 +5,9 @@
     border:4px solid hsl(217, 16%, 45%);
     border-radius: 10px;
     padding: 15px;
+    width:90%;
+    max-width: 600px;
+    margin: 0px auto;
     &__score{
         display: flex;
         flex-direction: column;
@@ -14,6 +17,10 @@
         border-radius: 5px;
         width: 85px;
         height: 80px;
+        @include mq(large){
+          width:100px;
+          height: 95px;
+        }
     }
     &__scoreText{
     font-size: 0.9rem;
@@ -25,5 +32,8 @@
     }
     &__logo{
       width: 75px;
+      @include mq(large){
+        width:100px;
+      }
     }
 }

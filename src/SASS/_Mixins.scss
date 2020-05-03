@@ -5,6 +5,10 @@
         height:95px;
         border-radius: 50%;
         cursor: pointer;
+        @include mq(large){
+          width:140px;
+          height: 140px;
+        }
         &::after{
             content: "";
             position: absolute;
@@ -19,6 +23,10 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: 50%;
+            @include mq(large){
+              width:115px;
+              height: 115px;
+            }
         }
 }
 
@@ -28,6 +36,10 @@
         height:150px;
         border-radius: 50%;
         cursor: pointer;
+        @include mq(large){
+          width:250px;
+          height:250px;
+        }
         &::after{
             content: "";
             position: absolute;
@@ -42,5 +54,27 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: 50%;
+            @include mq(large){
+              width:210px;
+              height:210px;
+            }
         } 
+}
+
+$breakpoints: (
+xsmall: (min-width: 460px),
+small: (min-width: 640px),
+medium: (min-width: 800px),
+large: (min-width: 1024px),
+xlarge: (min-width: 1200px),
+xxlarge: (min-width: 1440px),
+);
+
+@mixin mq($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint );
+  @if($size){
+    @media #{$size}{
+    @content
+    }
+  }
 }

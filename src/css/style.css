@@ -14,6 +14,7 @@ body {
 }
 
 .App {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,6 +44,9 @@ body {
   border: 4px solid #606e85;
   border-radius: 10px;
   padding: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0px auto;
 }
 
 .result__score {
@@ -65,6 +69,13 @@ body {
   height: 80px;
 }
 
+@media (min-width: 1024px) {
+  .result__score {
+    width: 100px;
+    height: 95px;
+  }
+}
+
 .result__scoreText {
   font-size: 0.9rem;
   color: #3b4363;
@@ -79,11 +90,24 @@ body {
   width: 75px;
 }
 
+@media (min-width: 1024px) {
+  .result__logo {
+    width: 100px;
+  }
+}
+
 .game {
   position: relative;
   width: 300px;
   height: 300px;
   margin: 50px auto;
+}
+
+@media (min-width: 1024px) {
+  .game {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .game__img {
@@ -96,7 +120,13 @@ body {
   z-index: -1;
 }
 
-.rules {
+@media (min-width: 1024px) {
+  .game__img {
+    width: 375px;
+  }
+}
+
+.rulesBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +138,15 @@ body {
           align-items: center;
 }
 
-.rules__btn {
+@media (min-width: 1024px) {
+  .rulesBtn {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.rulesBtn__btn {
   padding: 7.5px 35px;
   border: 2px solid #606e85;
   border-radius: 10px;
@@ -117,6 +155,30 @@ body {
   font-size: 1.3rem;
   letter-spacing: 2px;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.rules {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 50px 15px 25px;
+  border-radius: 10px;
+}
+
+.rules__escape {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/icon-close.svg");
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -131,6 +193,13 @@ body {
   top: 15%;
   left: 50%;
   background-color: #EAA927;
+}
+
+@media (min-width: 1024px) {
+  .circleScissors {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .circleScissors::after {
@@ -148,6 +217,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .circleScissors::after {
+    width: 115px;
+    height: 115px;
+  }
 }
 
 .circleScissors:hover {
@@ -172,6 +248,13 @@ body {
   background-color: #5471F4;
 }
 
+@media (min-width: 1024px) {
+  .circlePaper {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 .circlePaper::after {
   content: "";
   position: absolute;
@@ -187,6 +270,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .circlePaper::after {
+    width: 115px;
+    height: 115px;
+  }
 }
 
 .circlePaper:hover {
@@ -211,6 +301,13 @@ body {
   background-color: #DF3D55;
 }
 
+@media (min-width: 1024px) {
+  .circleRock {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 .circleRock::after {
   content: "";
   position: absolute;
@@ -226,6 +323,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .circleRock::after {
+    width: 115px;
+    height: 115px;
+  }
 }
 
 .circleRock:hover {
@@ -250,6 +354,13 @@ body {
   background-color: #8B5EE2;
 }
 
+@media (min-width: 1024px) {
+  .circleLizard {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 .circleLizard::after {
   content: "";
   position: absolute;
@@ -265,6 +376,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .circleLizard::after {
+    width: 115px;
+    height: 115px;
+  }
 }
 
 .circleLizard:hover {
@@ -289,6 +407,13 @@ body {
   background-color: #4CBCD1;
 }
 
+@media (min-width: 1024px) {
+  .circleSpock {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 .circleSpock::after {
   content: "";
   position: absolute;
@@ -304,6 +429,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .circleSpock::after {
+    width: 115px;
+    height: 115px;
+  }
 }
 
 .circleSpock:hover {
@@ -325,6 +457,13 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .scissorsBig {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .scissorsBig::after {
   content: "";
   position: absolute;
@@ -340,6 +479,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .scissorsBig::after {
+    width: 210px;
+    height: 210px;
+  }
 }
 
 .scissorsBig::after {
@@ -356,6 +502,13 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .paperBig {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .paperBig::after {
   content: "";
   position: absolute;
@@ -371,6 +524,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .paperBig::after {
+    width: 210px;
+    height: 210px;
+  }
 }
 
 .paperBig::after {
@@ -387,6 +547,13 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .rockBig {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .rockBig::after {
   content: "";
   position: absolute;
@@ -402,6 +569,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .rockBig::after {
+    width: 210px;
+    height: 210px;
+  }
 }
 
 .rockBig::after {
@@ -418,6 +592,13 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .lizardBig {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .lizardBig::after {
   content: "";
   position: absolute;
@@ -435,6 +616,13 @@ body {
   background-size: 50%;
 }
 
+@media (min-width: 1024px) {
+  .lizardBig::after {
+    width: 210px;
+    height: 210px;
+  }
+}
+
 .lizardBig::after {
   background-image: url("../images/icon-lizard.svg");
 }
@@ -447,6 +635,13 @@ body {
   cursor: pointer;
   background-color: #4CBCD1;
   cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .spockBig {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .spockBig::after {
@@ -464,6 +659,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
+}
+
+@media (min-width: 1024px) {
+  .spockBig::after {
+    width: 210px;
+    height: 210px;
+  }
 }
 
 .spockBig::after {
@@ -492,6 +694,21 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .gameResult__chosen {
+    max-width: 900px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .gameResult__house {
@@ -499,6 +716,13 @@ body {
   height: 150px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 1024px) {
+  .gameResult__house {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .gameResult__outcome {
@@ -515,6 +739,12 @@ body {
           align-items: center;
   margin-top: 50px;
   height: 180px;
+}
+
+@media (min-width: 1024px) {
+  .gameResult__outcome {
+    width: auto;
+  }
 }
 
 .gameResult__win {
@@ -536,5 +766,62 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.gameResult__yourChosen, .gameResult__houseChosen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .gameResult__yourChosen, .gameResult__houseChosen {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.gameResult__yourChosenTxt, .gameResult__houseChosenTxt {
+  margin-top: 35px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .gameResult__yourChosenTxt, .gameResult__houseChosenTxt {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gameResult__yourChosen {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gameResult__houseChosen {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

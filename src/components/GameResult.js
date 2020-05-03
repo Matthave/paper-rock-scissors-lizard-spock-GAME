@@ -198,8 +198,18 @@ class GameResult extends React.Component {
     return (
       <section className='gameResult'>
         <div className="gameResult__chosen">
-          <GameBigCircle classBigCircle={this.props.chosen} />
-          <div className="gameResult__house"></div>
+          <div className="gameResult__yourChosen">
+            <GameBigCircle classBigCircle={this.props.chosen} />
+            <h2 className="gameResult__yourChosenTxt">You Picked</h2>
+          </div>
+
+          <div className="gameResult__houseChosen">
+            <div className="gameResult__house"></div>
+            <h2 className="gameResult__houseChosenTxt">The House Picked</h2>
+
+          </div>
+
+
           <div className="gameResult__outcome">
             {this.state.outcomeVisibility ?
               <>
